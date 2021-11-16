@@ -1,6 +1,11 @@
 # 3D-Sensing-Sensor-Fusion
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/3dssf/src/ws/include/ws/stero_matching_naive.png" width="400" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/outputImages/stero_matching_naive1.png" width="300" > 
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/outputImages/stero_matching_naive2.png" width="300" >
+
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/outputImages/stero_matching_dynamic_program1.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/outputImages/stero_matching_dynamic_program2.png" width="300" >
+
 
 ```
 $ catkin_create_pkg ws std_msgs rospy roscpp 
