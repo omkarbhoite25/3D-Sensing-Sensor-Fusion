@@ -107,18 +107,18 @@ int main(int argc, char** argv) {
   cv::waitKey(0);
 
 
-  // std::stringstream out2;
-  // cv::Mat t;
-  // t = DyanmicProgram_StereoMatching(image1,image2,window_size,weight);
-  // Disparity2PointCloud(
-  //   output_file_dynamic_program,
-  //   height, width, t,
-  //   window_size, dmin, baseline, focal_length);
-  // out2 << output_file_dynamic_program << "stero_matching_dynamic_program.png";
-  // cv::imwrite(out2.str(), t);
-  // cv::namedWindow("t", cv::WINDOW_AUTOSIZE);
-  // cv::imshow("t", t);
-  // cv::waitKey(0);
+  std::stringstream out2;
+  cv::Mat t;
+  t = DyanmicProgram_StereoMatching(image1,image2,window_size,weight);
+  Disparity2PointCloud(
+    output_file_dynamic_program,
+    height, width, t,
+    window_size, dmin, baseline, focal_length);
+  out2 << output_file_dynamic_program << "stero_matching_dynamic_program.png";
+  cv::imwrite(out2.str(), t);
+  cv::namedWindow("t", cv::WINDOW_AUTOSIZE);
+  cv::imshow("t", t);
+  cv::waitKey(0);
 
   // Evaluation Metrics //
   double a = mean_sqared_error(image1,image2);
@@ -350,12 +350,15 @@ double peak_signal_to_noise_ratio(cv::Mat input_image1,cv::Mat input_image2){
 double var(cv::Mat & matrix, int i, int j, int window_size){
   double sd = 0;
   cv::Mat matrix_tmp = matrix(cv::Range(i, i + window_size), cv::Range(j, j + window_size));
-  cv::Mat matrix_square(window_size, window_size, CV_64F);
+  cv::Mat matrix_square(window_size, window_size, CV_64FC1);
   multiply(matrix_tmp, matrix_tmp, matrix_square);
   double avg = mean(matrix_tmp)[0];
   double avg_2 = mean(matrix_square)[0];
   sd = sqrt(avg_2 - avg * avg);
-  // std::cout << sd << std::endl;
+  if (isnan(sd) == 1){
+    sd = avg;
+  }
+  // std::cout <<  "sd" << sd << std::endl;
   return sd;
 }
 
@@ -390,7 +393,13 @@ double Structural_SImilarity_Measure(cv::Mat input_image1,cv::Mat input_image2, 
       double var_2 = var(input_image2,m,n,window_size);
       double covariance = Covariance(input_image1,input_image2,m,n,window_size);
       ssim += ((2*avg_1*avg_2+C1)*(2*covariance+C2))/((pow(avg_1,2)+pow(avg_2,2)+C1)*(pow(var_1,2)+pow(var_2,2)+C2)); 
+      // std::cout<<"avg_1"<<avg_1<<std::endl;
+      // std::cout<<"avg_2"<<avg_2<<std::endl;
+      // std::cout<<"var_1"<<var_1<<std::endl;
+      // std::cout<<"var_2"<<var_2<<std::endl;
+      // std::cout<<"covariance"<<covariance<<std::endl;
     }
+    // std::cout<<ssim<<std::endl;
   }
   ssim /= a*b;
   std::cout << "Structural SImilarity Measure : " << ssim << std::endl;
