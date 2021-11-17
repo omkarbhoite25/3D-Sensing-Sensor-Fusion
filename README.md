@@ -68,7 +68,9 @@ $ rosrun ws OpenCV_naive_stereo /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fu
 
 ```
 
-Evaluation Metrics of the images to the ground truth images.
+Evaluation Metrics of the disparity naive approach based images to the ground truth disparity images.
+
+As you can see the "Cloth" SSMI seems pretty good as it close to the ground truth. Whereas in case of other images there are some freckles in the disparity image obtained.
 
 
 | Image       | Naive       |     DP     | 3D POint Cloud | SSMI | Mean Squared Error | PSNR |
