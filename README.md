@@ -95,6 +95,15 @@ In my case the point cloud computation for the dynamic programming based approac
 |   Flower Pot    |  130.10s  |    334.07s | 1.64s & 0.36s      |    0.770409 |      28.8182    | 33.5341|
 | Rocks     |    122.75s         |   313.15s         |    1.66s & 0.87s            |  0.875    |      18.6975   |  35.413    |
 
+#
+### X-Image : Y-SSIM : Z-Mean Squared Error
+#
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Screenshot%20from%202021-11-17%2020-45-13.png" width="500" class="center">
+
+#
+### X-Image : Y-SSIM : Z-PSNR
+#
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Screenshot%20from%202021-11-17%2020-45-23.png" width="500" class="center" >
 
 #
 # Note
