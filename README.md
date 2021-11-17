@@ -56,7 +56,7 @@ In order to execute the code please follow the commands given below.
 ```
 $ catkin_create_pkg ws std_msgs rospy roscpp 
 ```
-The git clone this repo in the worspace and then execute the following commands in the parent package which you crreated using the above command.
+Then git clone this repo in the worspace and then execute the following commands in the parent package which you crreated using the above command.
 ```
 $ catkin_make
 $ source devel/setup.bash
