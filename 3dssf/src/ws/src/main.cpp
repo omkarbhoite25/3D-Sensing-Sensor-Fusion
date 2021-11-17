@@ -295,11 +295,17 @@ cv::Mat DyanmicProgram_StereoMatching(cv::Mat imgL, cv::Mat imgR, int Window_Siz
 		while (j > 0) {
 			switch (M.at<unsigned char>(i, j)) {
 			case 0:
-				disparities.at<unsigned short>(s, j) = abs(i - j);
+        if ((i-j)<0){
+				  disparities.at<unsigned short>(s, j) = abs(i-j);
+        }
+        else{
+          disparities.at<unsigned short>(s, j) = 0 ;
+        }
 				i--;
 				j--;
 				break;
 			case 1:
+        disparities.at<unsigned short>(s, j) = 0;
 				i--;
 				break;
 			case 2:
@@ -318,10 +324,10 @@ cv::Mat DyanmicProgram_StereoMatching(cv::Mat imgL, cv::Mat imgR, int Window_Siz
     }
 	}
 
-	cv::Mat disparities_CV_8UC1;
-	disparities.convertTo(disparities_CV_8UC1, CV_8UC1);
+	cv::Mat a;
+	disparities.convertTo(a, CV_8UC1);
   printf("Time taken to complete dynamic program approach: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
-	return disparities_CV_8UC1;
+	return a;
 };
 
 
