@@ -68,6 +68,8 @@ $ rosrun ws OpenCV_naive_stereo /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fu
 
 ```
 #
+# Evaluation Metrics
+#
 
 Evaluation Metrics of the disparity naive approach based images to the ground truth disparity images.
 
