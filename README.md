@@ -76,6 +76,10 @@ Evaluation Metrics of the disparity naive approach based images to the ground tr
 As you can see the "Cloth" SSMI seems pretty good as it close to the ground truth. Whereas in case of other images there are some freckles in the disparity image obtained.
 
 
+The another trend that I have noticed is that the dynamic programming takes a quite longer time then the naive based approach. I believe the reason behind this back tracking the optimal path to find the disparity map and also the computation cost for the calculating the cost map and path matrix.
+
+
+
 | Image       | Naive       |     DP     | 3D POint Cloud | SSMI | Mean Squared Error | PSNR |
 | ----------- | ----------- | ---------- | -------------- | ---- | ------------------ | ---- |
 |    Art   |  2126.78s   |   4949.74s   |   5.22s & 5.26s  |  0.595    |       37.689            |    14.236 |
