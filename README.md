@@ -5,7 +5,7 @@
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Art/Art/view0.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Art/Art/view1.png" width="300" >
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art/Naive/snapshot000.png" width="300" >
 #
-# Book Shelf
+# Book Shelf 
 
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Books/Books/view0.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Books/Books/view1.png" width="300" >
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books/Naive/snapshot00.png" width="300" >
