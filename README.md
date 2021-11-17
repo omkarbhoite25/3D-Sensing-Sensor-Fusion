@@ -6,6 +6,32 @@ In the following sections you can see the 2 input images given to the code and t
 Except  "Art" and "Book Shelf" section  rest of the 3D point clouds are based on "Binocular Stereo" which results in the concentration of the 3D points near to the focus and as a result you see that points spread out from the center of the image outwards. Where as the 3D point cloud of Art and Book Shelf sections are normal one and you can easily distingush it, as it looks as if its in real life scene. 
 
 
+```
+3dssf/src
+├── CMakeLists.txt -> /opt/ros/melodic/share/catkin/cmake/toplevel.cmake
+└── ws
+    ├── CMakeLists.txt
+    ├── data
+    │   ├── im0.pgm
+    │   ├── im1.pgm
+    │   ├── scene1.row3.col1.ppm
+    │   ├── scene1.row3.col2.ppm
+    │   ├── view0.png
+    │   └── view1.png
+    ├── include
+    │   ├── 3d.xyz
+    │   ├── stero_matching_dynamic_program.png
+    │   └── ws
+    │       ├── 3d.xyz
+    │       └── stero_matching_naive.png
+    ├── package.xml
+    └── src
+        ├── main.cpp <-------------------------------------------------------"main script"
+        └── main.h                       
+
+```
+
+
 #
 # Art
 
