@@ -78,6 +78,9 @@ As you can see the "Cloth" SSMI seems pretty good as it close to the ground trut
 
 The another trend that I have noticed is that the dynamic programming takes a quite longer time then the naive based approach. I believe the reason behind this is because of back-tracking of the optimal path to find the disparity map and also the computation cost for the calculating the cost map and path matrices.
 
+In my case the point cloud computation for the dynamic programming based approach is faster compared to the naive based approach. 
+
+
 
 
 
