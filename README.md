@@ -80,6 +80,7 @@ The another trend that I have noticed is that the dynamic programming takes a qu
 
 
 
+
 | Image       | Naive       |     DP     | 3D POint Cloud | SSMI | Mean Squared Error | PSNR |
 | ----------- | ----------- | ---------- | -------------- | ---- | ------------------ | ---- |
 |    Art   |  2126.78s   |   4949.74s   |   5.22s & 5.26s  |  0.595    |       37.689            |    14.236 |
@@ -90,3 +91,9 @@ The another trend that I have noticed is that the dynamic programming takes a qu
 | Cloth    |    118.20s     |     290.51s  |       1.10s & 0.66s  | 0.956163     |  11.4855  |  37.5293    |
 |   Flower Pot    |  130.10s  |    334.07s | 1.64s & 0.36s      |    0.770409 |      28.8182    | 33.5341|
 | Rocks     |    122.75s         |   313.15s         |    1.66s & 0.87s            |  0.875    |      18.6975   |  35.413    |
+
+
+#
+# Note
+Please make sure that you input the corect image to the evaluation metrics functioin code present in "main.cpp", and for now I am setting it to accept the input images that you provide.
+#
