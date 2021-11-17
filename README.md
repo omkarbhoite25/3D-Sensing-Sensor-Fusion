@@ -67,6 +67,7 @@ To run the code use the following command. (Note: As this is specific to my work
 $ rosrun ws OpenCV_naive_stereo /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/data/im0.pgm /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/data/im1.pgm /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/include/ws/ /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/include/ws/ 
 
 ```
+#
 
 Evaluation Metrics of the disparity naive approach based images to the ground truth disparity images.
 
