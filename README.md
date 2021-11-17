@@ -3,7 +3,9 @@ Stereo Matching code implementation in Naive and Dynamic Based approach.
 
 In the following sections you can see the 2 input images given to the code and the respective output of Naive based approach, dynamic program based approach & 3D point cloud.
 
-The except the Art and Book Shelf Section you rest of the 3D point clouds are based on "Binocular Stereo" which results in the concentration of the 3D points near to the focus and as a result you see it spread out from the center of the image to outwards. Where as the 3D point cloud of Art and Book Shelf sections are normal one and you can easily distingush it looks as if its in real life scene. 
+Except  "Art" and "Book Shelf" section  rest of the 3D point clouds are based on "Binocular Stereo" which results in the concentration of the 3D points near to the focus and as a result you see that points spread out from the center of the image outwards. Where as the 3D point cloud of Art and Book Shelf sections are normal one and you can easily distingush it, as it looks as if its in real life scene. 
+
+
 #
 # Art
 
@@ -65,6 +67,9 @@ To run the code use the following command. (Note: As this is specific to my work
 $ rosrun ws OpenCV_naive_stereo /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/data/im0.pgm /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/data/im1.pgm /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/include/ws/ /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/include/ws/ 
 
 ```
+
+Evaluation Metrics of the images to the ground truth images.
+
 
 | Image       | Naive       |     DP     | 3D POint Cloud | SSMI | Mean Squared Error | PSNR |
 | ----------- | ----------- | ---------- | -------------- | ---- | ------------------ | ---- |
