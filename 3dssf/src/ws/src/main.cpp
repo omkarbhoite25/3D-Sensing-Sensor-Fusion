@@ -305,11 +305,11 @@ cv::Mat DyanmicProgram_StereoMatching(cv::Mat imgL, cv::Mat imgR, int Window_Siz
 				j--;
 				break;
 			case 1:
-        disparities.at<unsigned short>(s, j) = 0;
+        // disparities.at<unsigned short>(s, j) = 0;
 				i--;
 				break;
 			case 2:
-				disparities.at<unsigned short>(s, j) = 0;
+				// disparities.at<unsigned short>(s, j) = 0;
 				j--;
 				break;
 			}
