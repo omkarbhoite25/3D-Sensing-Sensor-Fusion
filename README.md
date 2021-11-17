@@ -45,11 +45,16 @@
 #
 
 
-
+In order to execute the code please follow the commands given below.
 ```
 $ catkin_create_pkg ws std_msgs rospy roscpp 
+```
+The git clone this repo in the worspace and then execute the following commands in the parent package which you crreated using the above command.
+```
+$ catkin_make
 $ source devel/setup.bash
 ```
+To run the code use the following command. (Note: As this is specific to my workstation please make sure you provide the correct paths)
 
 ```
 $ rosrun ws OpenCV_naive_stereo /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/data/im0.pgm /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/data/im1.pgm /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/include/ws/ /home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/3dssf/src/ws/include/ws/ 
