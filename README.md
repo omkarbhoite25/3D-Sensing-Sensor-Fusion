@@ -2,46 +2,46 @@
 #
 # Art
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Art-7views/Art/view0.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Art-7views/Art/view1.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art-7views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art-7views/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art-7views/Naive/snapshot000.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Art/Art/view0.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Art/Art/view1.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Art/Naive/snapshot000.png" width="300" >
 #
 # Book Shelf
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Books-7views/Books/view0.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Books-7views/Books/view1.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books-2views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books-2views/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books-2views/Naive/snapshot00.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Books/Books/view0.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Books/Books/view1.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Books/Naive/snapshot00.png" width="300" >
 
 #
 # Plant
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Aloe-2views/Aloe/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Aloe-2views/Aloe/view5.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Aloe-2views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Aloe-2views/DP/stero_matching_dynamic_program.png" width="300"><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Aloe-2views/Naive/snapshot000.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Aloe/Aloe/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Aloe/Aloe/view5.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Aloe/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Aloe/DP/stero_matching_dynamic_program.png" width="300"><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Aloe/Naive/snapshot000.png" width="300" >
 #
 # Baby
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Baby1-2views/Baby1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Baby1-2views/Baby1/view5.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Baby1-2views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Baby1-2views/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Baby1-2views/Naive/snapshot000.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Baby/Baby1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Baby/Baby1/view5.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Baby/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Baby/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Baby/Naive/snapshot000.png" width="300" >
 
 #
 # Bowling Ball
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Bowling1-2views/Bowling1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Bowling1-2views/Bowling1/view5.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Bowling1-2views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Bowling1-2views/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Bowling1-2views/Naive/snapshot000.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Bowling/Bowling1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Bowling/Bowling1/view5.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Bowling/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Bowling/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Bowling/Naive/snapshot000.png" width="300" >
 
 #
 # Cloth
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Cloth1-2views/Cloth1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Cloth1-2views/Cloth1/view5.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Cloth1-2views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Cloth1-2views/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Cloth1-2views/Naive/snapshot000.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Cloth/Cloth1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Cloth/Cloth1/view5.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Cloth1/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Cloth1/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Cloth1/Naive/snapshot000.png" width="300" >
 
 #
 # Flower Pot
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Flowerpots-2views/Flowerpots/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Flowerpots-2views/Flowerpots/view5.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Flowerpots-2views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Flowerpots-2views/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Flowerpots-2views/Naive/snapshot000.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Flowerpots/Flowerpots/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Flowerpots/Flowerpots/view5.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Flowerpots/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Flowerpots/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Flowerpots/Naive/snapshot000.png" width="300" >
 #
 # Rocks
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Rocks1-2views/Rocks1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Rocks1-2views/Rocks1/view5.png" width="300" >
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Rocks1-2views/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Rocks1-2views/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Rocks1-2views/Naive/snapshot000.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Rocks1/Rocks1/view1.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Rocks1/Rocks1/view5.png" width="300" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Rocks/Naive/stero_matching_naive.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Rocks/DP/stero_matching_dynamic_program.png" width="300" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Output_Images/Rocks/Naive/snapshot000.png" width="300" >
 #
 
 
