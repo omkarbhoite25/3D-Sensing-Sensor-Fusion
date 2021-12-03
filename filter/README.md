@@ -1,0 +1,3 @@
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20aloe/Down_Sampled_With_Noise.png)  |  ![](https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20aloe/Joint_Bilateral_Filter_1_1.png)
