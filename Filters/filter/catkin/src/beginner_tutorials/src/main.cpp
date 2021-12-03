@@ -356,18 +356,18 @@ int main(int argc, char** argv){
     // // cv::imshow("Gaussian_Filter", GaussianOutput);
     // // cv::waitKey(0);
     // ///////////////////////////////////////////////////////////////////////
-    // float Spectral_Sigma = 0;
-    // float Spatial_Sigma = 0;
-    // // std::cout<<"Window Size : ";
-    // // std::cin >> window_size;
-    // std::cout<<"Spectral Sigma : ";
-    // std::cin >> Spectral_Sigma;
-    // std::cout<<"Spatial Sigma : ";
-    // std::cin >> Spatial_Sigma;
-    // cv::Mat BilateralOutput = Bilateral_Filter(image,5,Spectral_Sigma,Spatial_Sigma);
-    // out2 << output_file << "Bilateral_Filter.png";
-    // cv::imwrite(out2.str(),BilateralOutput);
-    // cv::imshow("Bilateral_Filter", BilateralOutput);
+    float Spectral_Sigma = 0;
+    float Spatial_Sigma = 0;
+    // std::cout<<"Window Size : ";
+    // std::cin >> window_size;
+    std::cout<<"Spectral Sigma : ";
+    std::cin >> Spectral_Sigma;
+    std::cout<<"Spatial Sigma : ";
+    std::cin >> Spatial_Sigma;
+    cv::Mat BilateralOutput = Bilateral_Filter(image,5,Spectral_Sigma,Spatial_Sigma);
+    out2 << output_file << "Bilateral_Filter.png";
+    cv::imwrite(out2.str(),BilateralOutput);
+    cv::imshow("Bilateral_Filter", BilateralOutput);
     ////////////////////////////////////////////////////////////////////////
     // int window_size = 3;
     // float Spectral_Sigma = 0;
@@ -379,10 +379,10 @@ int main(int argc, char** argv){
     // std::cout<<"Spatial Sigma : ";
     // std::cin >> Spatial_Sigma;
     // cv::imshow("Original Color Image", color);
-    cv::Mat a = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_5_5.png",0);
-    cv::Mat a_bl = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_bl_5_5.png",0);
-    cv::Mat a_cu = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_cu_5_5.png",0);
-    cv::Mat b = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/disp1.png",0);
+    // cv::Mat a = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_5_5.png",0);
+    // cv::Mat a_bl = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_bl_5_5.png",0);
+    // cv::Mat a_cu = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_cu_5_5.png",0);
+    // cv::Mat b = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/disp1.png",0);
     // cv::Mat d = synthetic_depth_generation(b);
     // out2 << output_file << "Down_Sampled_With_Noise.png";
     // cv::imwrite(out2.str(),d);
@@ -406,16 +406,16 @@ int main(int argc, char** argv){
     // cv::medianBlur(im, output, 3);
     // cv::imshow("median", output);
     //cv::waitKey();
-    std::cout << "PSNR" <<cv::PSNR(a,b) << std::endl;
-    double m = Structural_SImilarity_Measure(a,b,5);
+    // std::cout << "PSNR" <<cv::PSNR(a,b) << std::endl;
+    // double m = Structural_SImilarity_Measure(a,b,5);
 
-    std::cout << "PSNR" <<cv::PSNR(a_bl,b) << std::endl;
-    double n = Structural_SImilarity_Measure(a_bl,b,5);
+    // std::cout << "PSNR" <<cv::PSNR(a_bl,b) << std::endl;
+    // double n = Structural_SImilarity_Measure(a_bl,b,5);
 
 
-    std::cout << "PSNR" <<cv::PSNR(a_cu,b) << std::endl;
-    double q = Structural_SImilarity_Measure(a_cu,b,5);
-    // bilateral
+    // std::cout << "PSNR" <<cv::PSNR(a_cu,b) << std::endl;
+    // double q = Structural_SImilarity_Measure(a_cu,b,5);
+    // // bilateral
     // double window_size = 11;
     // cv::bilateralFilter(im, output, window_size, 2 * window_size, window_size / 2);
     // cv::imshow("bilateral", output);
