@@ -1,5 +1,33 @@
+# Bilateral Filter
+
+Using the **Bilaterlateral** filter create an image matrix where the spectral and spatial sigma varies along the row [1 10 30 50] and along the column as [1 10 30 50]. So, diagonally we have the sigma's as [(1,1),(10,10,),(30,30),(50,50)] and the rest as easy to figure out.
+
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_1_1.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_1_10.png" width="200" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_1_30.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_1_50.png" width="200" >
+
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_10_1.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_10_10.png" width="200" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_10_30.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_10_50.png" width="200" >
+
+
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_30_1.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_30_10.png" width="200" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_30_30.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_30_50.png" width="200" >
+
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_50_1.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_50_10.png" width="200" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_50_30.png" width="200" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/bilateral/Bilateral_Filter_50_50.png" width="200" >
+
+
+
+
+
+
+#
+# Upsampling Guided Joint Bilaterl Filter
+
+
+
+
 In the image matrix below the spatial & spectral sigma are varied from 1 to 5 along the row and columns.
-This is just the sample for 
+This is just the sample out all the 12 different pairs of RGB and Depth images. 
 
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_1_1.png" width="175" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_1_2.png" width="175" >
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_1_3.png" width="175" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_1_4.png" width="175" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_1_5.png" width="175" >
@@ -22,10 +50,27 @@ This is just the sample for
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_5_1.png" width="175" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_5_2.png" width="175" >
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_5_3.png" width="175" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_5_4.png" width="175" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_5_5.png" width="175" >
 
+#
+# Noise (Synthetic depth and noise generator)
+
+The image to the lef is downsampled and then random noise is being added to the image. This image is then used as the input image for the upsampling guided joint bilateral filter.
+
+the image to the right is when is applied with the upsampled guided joint bilateral filter
+
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Down_Sampled_With_Noise.png" width="450" > <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_5_5.png" width="450" >
 
 
 
 
+#
+# Evaluation
+
+Generated output images for the upsampled guided joint bilateral filter for 12 different pair of RGB and Depth images but only few were used to perform the SSMI and PSNR Evaluation and the result is shown below.
+
+|Filter|Runtime|
+|------|-------|
+|Bilateral|0.33-0.33 sec|
+|Upsampling Guided Joint Bilateral|0.44-0.66 sec|
 
 
 Structural Similarity Index (Spectral Sigma = 5, Spatial Sigma = 5)
@@ -50,11 +95,14 @@ PSNR (Spectral Sigma = 5, Spatial Sigma = 5)
 |Reindeer|27.4775|27.0694|
 |Cleaning Equipmemnt|27.1574|26.8003|
 
+#
 
 Note: Joint_Bilateral_Filter_23_23.png means that its an image output from guided upsampled joint bilateral filter with spectral sigma = 23 and spatial sigma = 23
 There are lots of images with diferent spectral and spatial sigma's and can be viewed in the following directories.
 If a image has **bl** ints name then is **bi-linear interpolated** and if it has **cu** then is **cubic interpolated**
 Below is the tree structure of the main directory and you can seem where the diffenet image are located.
+
+#
 
 ```
 .
