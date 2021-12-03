@@ -118,7 +118,7 @@ Below is the tree structure of the main directory and you can seem where the dif
 ├── beginner_tutorials
 │   ├── CMakeLists.txt
 │   ├── include
-│   │   ├── beginner_tutorials
+│   │   ├── beginner_tutorials  <-------- The output images of Upsampling Guided Joint Bilateral Filter and its Evaluation images too.
 │   │   │   ├── bilateral
 │   │   │   │   ├── Bilateral_Filter_10_10.png
 │   │   │   │   ├── Bilateral_Filter_10_1.png
@@ -288,7 +288,7 @@ Below is the tree structure of the main directory and you can seem where the dif
 │   │   │       ├── Joint_Bilateral_Filter_bl_5_5.png
 │   │   │       └── Joint_Bilateral_Filter_cu_5_5.png
 │   │   ├── lena.png
-│   │   └── output bilateral filter
+│   │   └── output bilateral filter <---------------- The output images of the bilateral filter
 │   │       ├── Bilateral_Filter_100_10.png
 │   │       ├── Bilateral_Filter_10_15.png
 │   │       ├── Bilateral_Filter_10_18.png
