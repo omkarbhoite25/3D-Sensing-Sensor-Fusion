@@ -355,47 +355,47 @@ int main(int argc, char** argv){
     // cv::imwrite(out1.str(),GaussianOutput);
     // // cv::imshow("Gaussian_Filter", GaussianOutput);
     // // cv::waitKey(0);
-    // ///////////////////////////////////////////////////////////////////////
-    float Spectral_Sigma = 0;
-    float Spatial_Sigma = 0;
-    // std::cout<<"Window Size : ";
-    // std::cin >> window_size;
-    std::cout<<"Spectral Sigma : ";
-    std::cin >> Spectral_Sigma;
-    std::cout<<"Spatial Sigma : ";
-    std::cin >> Spatial_Sigma;
-    cv::Mat BilateralOutput = Bilateral_Filter(image,5,Spectral_Sigma,Spatial_Sigma);
-    out2 << output_file << "Bilateral_Filter.png";
-    cv::imwrite(out2.str(),BilateralOutput);
-    cv::imshow("Bilateral_Filter", BilateralOutput);
-    ////////////////////////////////////////////////////////////////////////
-    // int window_size = 3;
+    // // ///////////////////////////////////////////////////////////////////////
     // float Spectral_Sigma = 0;
     // float Spatial_Sigma = 0;
-    // std::cout<<"Window Size : ";
-    // std::cin >> window_size;
+    // // std::cout<<"Window Size : ";
+    // // std::cin >> window_size;
     // std::cout<<"Spectral Sigma : ";
     // std::cin >> Spectral_Sigma;
     // std::cout<<"Spatial Sigma : ";
     // std::cin >> Spatial_Sigma;
+    // cv::Mat BilateralOutput = Bilateral_Filter(image,5,Spectral_Sigma,Spatial_Sigma);
+    // out2 << output_file << "Bilateral_Filter.png";
+    // cv::imwrite(out2.str(),BilateralOutput);
+    // cv::imshow("Bilateral_Filter", BilateralOutput);
+    ////////////////////////////////////////////////////////////////////////
+    int window_size = 3;
+    float Spectral_Sigma = 0;
+    float Spatial_Sigma = 0;
+    std::cout<<"Window Size : ";
+    std::cin >> window_size;
+    std::cout<<"Spectral Sigma : ";
+    std::cin >> Spectral_Sigma;
+    std::cout<<"Spatial Sigma : ";
+    std::cin >> Spatial_Sigma;
     // cv::imshow("Original Color Image", color);
-    // cv::Mat a = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_5_5.png",0);
+    cv::Mat a = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/Input_Images/Art/Art/view1.png",0);
     // cv::Mat a_bl = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_bl_5_5.png",0);
     // cv::Mat a_cu = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/Joint_Bilateral_Filter_cu_5_5.png",0);
-    // cv::Mat b = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output gifts/disp1.png",0);
-    // cv::Mat d = synthetic_depth_generation(b);
-    // out2 << output_file << "Down_Sampled_With_Noise.png";
-    // cv::imwrite(out2.str(),d);
+    cv::Mat b = cv::imread("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/Stereo_Matching/Output_Images/Art/Naive/stero_matching_naive.png",0);
+    cv::Mat d = synthetic_depth_generation(b);
+    out2 << output_file << "Down_Sampled_With_Noise.png";
+    cv::imwrite(out2.str(),d);
     // cv::PSNR()
     // cv::Mat a = cv::imread(argv[1],0);
     // cv::Mat b = image;
     // cv::imshow("a", a);
     // cv::imshow("b", d);
-    // cv::Mat JointBilateralOutput = Upsampling(a,d,window_size,Spectral_Sigma,Spatial_Sigma);
-    // out3 << output_file << "Joint_Bilateral_Filter.png";
-    // cv::imwrite(out3.str(),JointBilateralOutput);
-    // std::cout << window_size<<" "<<Spectral_Sigma<<" "<<Spatial_Sigma<<std::endl;
-    // cv::imshow("Joint_Bilateral_Filter", JointBilateralOutput);
+    cv::Mat JointBilateralOutput = Upsampling(a,d,window_size,Spectral_Sigma,Spatial_Sigma);
+    out3 << output_file << "Joint_Bilateral_Filter.png";
+    cv::imwrite(out3.str(),JointBilateralOutput);
+    std::cout << window_size<<" "<<Spectral_Sigma<<" "<<Spatial_Sigma<<std::endl;
+    cv::imshow("Joint_Bilateral_Filter", JointBilateralOutput);
     // cv::waitKey(0);
     ///////////////////////////////////////////////////////////////////////
     // gaussian
