@@ -1,3 +1,6 @@
+#
+# Note: I have commented a lot of stuff in the code and one needs to tweak it, and also provide with correct paths to images for further use.
+
 # Bilateral Filter
 
 Using the **Bilaterlateral** filter create an image matrix where the spectral and spatial sigma varies along the row [1 10 30 50] and along the column as [1 10 30 50]. So, diagonally we have the sigma's as [(1,1),(10,10,),(30,30),(50,50)] and the rest as easy to figure out.
