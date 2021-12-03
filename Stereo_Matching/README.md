@@ -51,19 +51,19 @@ Except  "Art" and "Book Shelf" section  rest of the 3D point clouds are based on
 #
 # Baby
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo%20Matching/Input_Images/Baby/Baby1/view1.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Baby/Baby1/view5.png" width="400" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Baby/Baby1/view1.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Baby/Baby1/view5.png" width="400" >
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Baby/Naive/stero_matching_naive.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Baby/DP/stero_matching_dynamic_program.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Baby/Naive/snapshot000.png" width="400" >
 
 #
 # Bowling Ball
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo%20Matching/Input_Images/Bowling/Bowling1/view1.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Bowling/Bowling1/view5.png" width="400" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Bowling/Bowling1/view1.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Bowling/Bowling1/view5.png" width="400" >
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Bowling/Naive/stero_matching_naive.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Bowling/DP/stero_matching_dynamic_program.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Bowling/Naive/snapshot000.png" width="400" >
 
 #
 # Cloth
 
-<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo%20Matching/Input_Images/Cloth/Cloth1/view1.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Cloth/Cloth1/view5.png" width="400" >
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Cloth/Cloth1/view1.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Input_Images/Cloth/Cloth1/view5.png" width="400" >
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Cloth1/Naive/stero_matching_naive.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Cloth1/DP/stero_matching_dynamic_program.png" width="400" ><img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Stereo_Matching/Output_Images/Cloth1/Naive/snapshot000.png" width="400" >
 
 #
