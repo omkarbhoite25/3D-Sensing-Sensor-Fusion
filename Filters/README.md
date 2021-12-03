@@ -55,10 +55,19 @@ This is just the sample out all the 12 different pairs of RGB and Depth images.
 
 The image to the lef is downsampled and then random noise is being added to the image. This image is then used as the input image for the upsampling guided joint bilateral filter.
 
-the image to the right is when is applied with the upsampled guided joint bilateral filter
+The image to the right is when is applied with the upsampled guided joint bilateral filter
 
 <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Down_Sampled_With_Noise.png" width="450" > <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/output%20cones/Joint_Bilateral_Filter_5_5.png" width="450" >
 
+#
+# My own depth generated images
+The image to the lef is downsampled and then random noise is being added to the image. This image is then used as the input image for the upsampling guided joint bilateral filter.
+
+The image to the right is when is applied with the upsampled guided joint bilateral filter, the output is not as good as expected here and the spectral sigma is 0.2 and spatial sigma is 0.5, But I presume that its just the play of sigma's that can lead to better output images.
+
+Also, lot of other out images with different sigmas can be found in the directory. This is just the sample from it.
+
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/my%20own%20dataset/Down_Sampled_With_Noise.png" width="450" > <img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/Filters/filter/catkin/src/beginner_tutorials/include/beginner_tutorials/my%20own%20dataset/Joint_Bilateral_Filter_3_0.2_0.5.png" width="450" >
 
 
 
@@ -110,10 +119,45 @@ Below is the tree structure of the main directory and you can seem where the dif
 │   ├── CMakeLists.txt
 │   ├── include
 │   │   ├── beginner_tutorials
+│   │   │   ├── bilateral
+│   │   │   │   ├── Bilateral_Filter_10_10.png
+│   │   │   │   ├── Bilateral_Filter_10_1.png
+│   │   │   │   ├── Bilateral_Filter_10_30.png
+│   │   │   │   ├── Bilateral_Filter_10_50.png
+│   │   │   │   ├── Bilateral_Filter_1_10.png
+│   │   │   │   ├── Bilateral_Filter_1_1.png
+│   │   │   │   ├── Bilateral_Filter_1_30.png
+│   │   │   │   ├── Bilateral_Filter_1_50.png
+│   │   │   │   ├── Bilateral_Filter_30_10.png
+│   │   │   │   ├── Bilateral_Filter_30_1.png
+│   │   │   │   ├── Bilateral_Filter_30_30.png
+│   │   │   │   ├── Bilateral_Filter_30_50.png
+│   │   │   │   ├── Bilateral_Filter_50_10.png
+│   │   │   │   ├── Bilateral_Filter_50_1.png
+│   │   │   │   ├── Bilateral_Filter_50_30.png
+│   │   │   │   └── Bilateral_Filter_50_50.png
+│   │   │   ├── Down_Sampled_With_Noise.png
+│   │   │   ├── Joint_Bilateral_Filter.png
+│   │   │   ├── my own dataset
+│   │   │   │   ├── Down_Sampled_With_Noise.png
+│   │   │   │   ├── Joint_Bilateral_Filter_3_0.2_0.5.png
+│   │   │   │   ├── Joint_Bilateral_Filter_3_0.2_0.7.png
+│   │   │   │   ├── Joint_Bilateral_Filter_3_2_50.png
+│   │   │   │   ├── Joint_Bilateral_Filter_3_3.png
+│   │   │   │   ├── Joint_Bilateral_Filter_3_50_2.png
+│   │   │   │   ├── Joint_Bilateral_Filter_3_5.png
+│   │   │   │   ├── Joint_Bilateral_Filter_3_7.png
+│   │   │   │   ├── Joint_Bilateral_Filter_5_3.png
+│   │   │   │   ├── Joint_Bilateral_Filter_5_5.png
+│   │   │   │   ├── Joint_Bilateral_Filter_5_7.png
+│   │   │   │   ├── Joint_Bilateral_Filter_7_3.png
+│   │   │   │   ├── Joint_Bilateral_Filter_7_5.png
+│   │   │   │   └── Joint_Bilateral_Filter_7_7.png
+│   │   │   ├── Original_Image.png
 │   │   │   ├── output aloe
 │   │   │   │   ├── disp1.png
 │   │   │   │   ├── Down_Sampled_With_Noise.png
-│   │   │   │   ├── Joint_Bilateral_Filter_1_1.png 
+│   │   │   │   ├── Joint_Bilateral_Filter_1_1.png
 │   │   │   │   ├── Joint_Bilateral_Filter_2_2.png
 │   │   │   │   ├── Joint_Bilateral_Filter_3_3.png
 │   │   │   │   ├── Joint_Bilateral_Filter_4_4.png
@@ -274,5 +318,6 @@ Below is the tree structure of the main directory and you can seem where the dif
 │   └── src
 │       └── main.cpp
 └── CMakeLists.txt -> /opt/ros/melodic/share/catkin/cmake/toplevel.cmake
+
 
 ```
