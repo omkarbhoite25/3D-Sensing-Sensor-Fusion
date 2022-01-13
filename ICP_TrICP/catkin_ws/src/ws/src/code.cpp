@@ -5,7 +5,7 @@
 #include <vector>
 #include "ros/ros.h"
 #include "math.h"
-#include </home/omkar/ELTE/ELTE/3DSSF/ICP/catkin_ws/src/ws/src/nanoflann.hpp>
+#include </home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/ICP_TrICP/catkin_ws/src/ws/src/nanoflann.hpp>
 #include <eigen3/Eigen/Dense>
 #include <chrono> 
 #include <random>
@@ -21,8 +21,8 @@ int MAX_ITERATIONS = 200;
 int NUM_OF_TR_POINTS = 1000;
 int AddNoiseToPointCloud = 0;
 
-string OUTPUT_FILE = "/home/omkar/ELTE/ELTE/3DSSF/ICP/catkin_ws/src/ws/include/output.xyz";
-string OUTPUT_FILE_FUSE = "/home/omkar/ELTE/ELTE/3DSSF/ICP/catkin_ws/src/ws/include/fuse.xyz";
+string OUTPUT_FILE = "/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/ICP_TrICP/catkin_ws/src/ws/include/output.xyz";
+string OUTPUT_FILE_FUSE = "/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/ICP_TrICP/catkin_ws/src/ws/include/fuse.xyz";
 const double ERROR_DROP_THRESH = 0.0001; //iterative_closest_point
 const double iterative_closest_point_ERROR_LOW_THRESH = 0.01; //iterative_closest_point
 const double DIST_DROP_THRESH = 150.0; //Tr-iterative_closest_point
@@ -71,7 +71,7 @@ int main(int argc, char ** argv){
     dst(i,2) = point_cloud_data_2[i].z;
   }
   
-  ofstream outputFile3("/home/omkar/ELTE/ELTE/3DSSF/ICP/catkin_ws/src/ws/include/dst.xyz");
+  ofstream outputFile3("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/ICP_TrICP/catkin_ws/src/ws/include/dst.xyz");
   for(int g = 0; g<dst.rows(); g++){
     for(int gh = 0; gh<3; gh++){
       outputFile3 << dst(g,gh) << " ";
@@ -108,7 +108,7 @@ int main(int argc, char ** argv){
   }
 
 
-  ofstream outputFile("/home/omkar/ELTE/ELTE/3DSSF/ICP/catkin_ws/src/ws/include/src.xyz");
+  ofstream outputFile("/home/omkar/ELTE/ELTE/3DSSF/3D-Sensing-Sensor-Fusion/ICP_TrICP/catkin_ws/src/ws/include/src.xyz");
   for(int g = 0; g<src.rows(); g++){
     for(int gh = 0; gh<3; gh++){
       outputFile << src(g,gh) << " ";
@@ -336,7 +336,14 @@ int iterative_closest_point(const Eigen::MatrixXf &src, const Eigen::MatrixXf &d
         src_trans(fs,a) = src_trans(fs,a)+t(a);   
       }
     }
-
+//////////////////////////////////////////////////
+    double sum = 0;
+    for (int i=0; i<3; i++){
+      sum += src_trans(i,i);
+    }
+    double rotation_error_radians = cos((sum-1)/2);
+    cout << "***********************************************Rotation_Error_Radians: "<<rotation_error_radians<<endl;
+///////////////////////////////////////////////////////////
     cout <<"********iterative_closest_point Cycle "+ to_string(i)+ "*****" << endl;
     cout <<"MSE: "+ to_string(mean_error)+ "/" + to_string(iterative_closest_point_ERROR_LOW_THRESH)  <<endl;
     cout <<"Change of MSE: "+to_string(abs(previousError-mean_error))+ "/" + to_string(error_drop_thresh) << endl;
@@ -449,7 +456,7 @@ int tr_iterative_closest_point(const Eigen::MatrixXf &src,
         src_trans(fs,a) = src_trans(fs,a)+t(a);   
       }
     }
-
+    
     cout <<"********TR_iterative_closest_point Cycle "+ to_string(i)+ "*****" << endl;
     cout <<"trimmed MSE: "+ to_string(e)+ "/" + to_string(error_low_thresh) <<endl;
     cout <<"Change of trimmed MSE: "+to_string(abs(prev_dist_sum-dist_sum))+ "/" + to_string(dist_drop_thresh) << endl;
