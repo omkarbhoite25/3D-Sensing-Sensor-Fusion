@@ -101,3 +101,4 @@ Iterative closest point (ICP)is an algorithm employed to minimize the difference
 |Image|Error Radians|
 |-----|-------------|
 |Bunny|(0.935667-0.939346-0.941136-0.942157-0.942893-0.943415-0.943801-0.9441-0.944246-0.944326-0.944296-0.944076)|
+<img src="https://github.com/omkarbhoite25/3D-Sensing-Sensor-Fusion/blob/main/ICP_TrICP/catkin_ws/src/ws/include/OutputImages/BunnyErrorPlot.png" width="600" >
