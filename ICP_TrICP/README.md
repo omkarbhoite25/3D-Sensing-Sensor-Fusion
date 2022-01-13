@@ -1,4 +1,45 @@
+##
+# Iterative Closest Point
 
+Iterative closest point (ICP)is an algorithm employed to minimize the difference between two clouds of points. ICP is often used to reconstruct 2D or 3D surfaces from different scans, to localize robots and achieve optimal path planning (especially when wheel odometry is unreliable due to slippery terrain)
+
+```
+.
+├── CMakeLists.txt -> /opt/ros/melodic/share/catkin/cmake/toplevel.cmake
+└── ws
+    ├── CMakeLists.txt
+    ├── include
+    │   ├── dst.xyz
+    │   ├── fuse.xyz
+    │   ├── OutputImages
+    │   │   ├── Armdillo1.png
+    │   │   ├── Armdillo2.png
+    │   │   ├── Armdillo3.png
+    │   │   ├── Armdillo4.png
+    │   │   ├── Armdillo5.png
+    │   │   ├── bunny1.png
+    │   │   ├── bunny2.png
+    │   │   ├── bunny3.png
+    │   │   ├── Fountain1.png
+    │   │   ├── Fountain2.png
+    │   │   └── Fountain3.png
+    │   ├── output.xyz
+    │   ├── src.xyz
+    │   └── ws
+    │       └── nanoflann.hpp
+    ├── package.xml
+    └── src
+        ├── Armadillo_rotated.xyz
+        ├── Armadillo_sparse.xyz
+        ├── bunny_rotated.xyz
+        ├── bunny_sparse.xyz
+        ├── code.cpp
+        ├── nanoflann.hpp
+        ├── pointCloud1.xyz
+        └── pointCloud2.xyz
+
+5 directories, 27 files
+```
 ##
 # Armdillo
 
