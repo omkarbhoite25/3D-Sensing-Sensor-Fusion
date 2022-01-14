@@ -33,8 +33,8 @@ double previousError = 0;
 void searchNN(const Eigen::MatrixXf & cloud1,const Eigen::MatrixXf & cloud2, const size_t k,Eigen::MatrixXi &indices,Eigen::MatrixXf &dists, const bool return_dist_squared);
 int PointCloudProcessing(string file_path, vector<Point3d >& out_points);
 void sort_matr(const Eigen::MatrixXf &m,Eigen::MatrixXf &out, Eigen::MatrixXi &indexes, int to_save);
-int tr_iterative_closest_point(const Eigen::MatrixXf &src,const Eigen::MatrixXf &dst,Eigen::MatrixXf &src_trans, const int max_itreations,const double error_low_thresh,  const double dist_drop_thresh,const int Npo);
-int iterative_closest_point(const Eigen::MatrixXf &src,const Eigen::MatrixXf &dst,Eigen::MatrixXf &src_trans,const int max_itreations,const double error_drop_thresh);
+int tr_iterative_closest_point(const Eigen::MatrixXf &src,const Eigen::MatrixXf &dst,Eigen::MatrixXf &srcTransformation, const int max_itreations,const double error_low_thresh,  const double dist_drop_thresh,const int Npo);
+int iterative_closest_point(const Eigen::MatrixXf &src,const Eigen::MatrixXf &dst,Eigen::MatrixXf &srcTransformation,const int max_itreations,const double error_drop_thresh);
 int EigenJacboiSVD(const Eigen::MatrixXd &A, const Eigen::MatrixXd &B,Eigen::Matrix3d &R,Eigen::Vector3d &t );
 Eigen::MatrixXf fuse(const Eigen::MatrixXf &cloud1,const Eigen::MatrixXf &cloud2);
 
@@ -173,13 +173,6 @@ int main(int argc, char ** argv){
 
 
 void searchNN(const Eigen::MatrixXf & cloud1, const Eigen::MatrixXf & cloud2, const size_t k, Eigen::MatrixXi &indices, Eigen::MatrixXf &dists, const bool return_dist_squared = 0){
-  // Eigen::MatrixXf uses colMajor as default
-  // copy the coords to a RowMajor matrix and search in this matrix
-  // the nearest neighbors for each datapoint
-  // Eigen::Matrix<float, Eigen::Dynamic, 3, Eigen::RowMajor> coords = cloud.leftCols(3);
-
-  // different max_leaf values only affect the search speed 
-  // and any value between 10 - 50 is reasonable
   const int max_leaf = 10;
   typedef Eigen::Matrix<float, Eigen::Dynamic, 3, Eigen::RowMajor> RowMatX3f;
   RowMatX3f coords1 = cloud1.leftCols(3);
@@ -219,7 +212,6 @@ int PointCloudProcessing(string file_path, vector<Point3d >& out_points){
     double nx_ny_nz;
      
     while (file >> tmp.x && file >> tmp.y && file >> tmp.z && file >> nx_ny_nz && file >> nx_ny_nz && file >> nx_ny_nz){
-      // add a copy of tmp to points
       tmpv.push_back(tmp);
     }
     file.close();
@@ -233,11 +225,6 @@ int PointCloudProcessing(string file_path, vector<Point3d >& out_points){
 }
 
 int EigenJacboiSVD(const Eigen::MatrixXd &A, const Eigen::MatrixXd &B, Eigen::Matrix3d &R, Eigen::Vector3d &t ){
-    /*
-    Notice:
-    1/ JacobiSVD return U,S,V, S as a vector, "use U*S*Vt" to get original Matrix;
-    2/ matrix type 'MatrixXd' or 'MatrixXf' matters.
-    */
     Eigen::Vector3d centroid_A(0,0,0);
     Eigen::Vector3d centroid_B(0,0,0);
     Eigen::MatrixXd AA = A;
@@ -280,32 +267,24 @@ int EigenJacboiSVD(const Eigen::MatrixXd &A, const Eigen::MatrixXd &B, Eigen::Ma
 
 }
 
-int iterative_closest_point(const Eigen::MatrixXf &src, const Eigen::MatrixXf &dst, Eigen::MatrixXf &src_trans, const int max_itreations, const double error_drop_thresh){
+int iterative_closest_point(const Eigen::MatrixXf &src, const Eigen::MatrixXf &dst, Eigen::MatrixXf &srcTransformation, const int max_itreations, const double error_drop_thresh){
   Eigen::MatrixXi indices;
   Eigen::MatrixXf dists;
-  src_trans = src; 
+  srcTransformation = src; 
   float prev_dist_sum = FLT_MAX;
 
-  // create a new matrix that is gonna be src, but ordered as closest to dst points - it has dst number of rows
   Eigen::MatrixXf src_neighbours(dst.rows(),3);
   double mean_error = 0;
 
   float dist_sum  = 0;
-  // iterate throug optimisation till you eather reach max iterations or break out
   for(int i=0; i<max_itreations; i++){
-    searchNN(src_trans, dst, K, indices, dists);
+    searchNN(srcTransformation, dst, K, indices, dists);
 
-    // calculate error btw points src, dst
     dist_sum = 0;
     for(int d=0; d<dists.size(); d++){
       dist_sum+=dists(d);
     }
     mean_error = dist_sum/dists.size();
-    // check if error is dropping as fast as it should, if not, finish search
-    // if(abs(previousError-mean_error) < error_drop_thresh){
-    //   cout << "iterative_closest_point has sucessfully reached the neceserry error_drop_thresh." << endl;
-    //   return 1;
-    // }
 
     if(abs(mean_error) < iterative_closest_point_ERROR_LOW_THRESH){
       cout << "iterative_closest_point has sucessfully reached the neceserry error_low_thresh." << endl;
@@ -315,9 +294,9 @@ int iterative_closest_point(const Eigen::MatrixXf &src, const Eigen::MatrixXf &d
     // reorder src to fit to the nearest neighbour scheme
     for(int j=0; j<src_neighbours.rows(); j++){
       int ind = indices(j,1);
-      src_neighbours(j,0) = src_trans(ind,0);
-      src_neighbours(j,1) = src_trans(ind,1);
-      src_neighbours(j,2) = src_trans(ind,2);
+      src_neighbours(j,0) = srcTransformation(ind,0);
+      src_neighbours(j,1) = srcTransformation(ind,1);
+      src_neighbours(j,2) = srcTransformation(ind,2);
     }
 
     // find transform matrix
@@ -328,28 +307,28 @@ int iterative_closest_point(const Eigen::MatrixXf &src, const Eigen::MatrixXf &d
     Eigen::Vector3f t = tt.cast<float>();
 
     // rotation
-    src_trans = (R*src_trans.transpose()).transpose();
+    srcTransformation = (R*srcTransformation.transpose()).transpose();
 
     // translation
-    for(int fs = 0; fs<src_trans.rows();fs++){
+    for(int fs = 0; fs<srcTransformation.rows();fs++){
       for(int a = 0; a<3; a++){
-        src_trans(fs,a) = src_trans(fs,a)+t(a);   
+        srcTransformation(fs,a) = srcTransformation(fs,a)+t(a);   
       }
     }
 //////////////////////////////////////////////////
+    Eigen::MatrixXf a;
+    a = dst.transpose()*srcTransformation;
     double sum = 0;
     for (int i=0; i<3; i++){
-      sum += src_trans(i,i);
+      sum += a(i,i);
     }
-    double rotation_error_radians = cos((sum-1)/2);
+    double rotation_error_radians = atan((cos((sum-1)/2))* (180/3.14));
     cout << "***********************************************Rotation_Error_Radians: "<<rotation_error_radians<<endl;
 ///////////////////////////////////////////////////////////
-    cout <<"********iterative_closest_point Cycle "+ to_string(i)+ "*****" << endl;
+    cout <<"iterative_closest_point Cycle "+ to_string(i)+ "*****" << endl;
     cout <<"MSE: "+ to_string(mean_error)+ "/" + to_string(iterative_closest_point_ERROR_LOW_THRESH)  <<endl;
     cout <<"Change of MSE: "+to_string(abs(previousError-mean_error))+ "/" + to_string(error_drop_thresh) << endl;
 
-    // cout << to_string(abs(prev_dist_sum-dist_sum)) << endl;
-    // cout << to_string(mean_error) << endl;
 
     previousError = mean_error;
     prev_dist_sum = dist_sum;
@@ -362,20 +341,15 @@ void sort_matr(const Eigen::MatrixXf &m,
                int to_save = -1){
   vector<pair<float, int> > vp;
 
-  // if to_save parameter is default (-1), all elements of the original matrix are saved
-  // otherwise the number of elements that is passed is preseved 
   if(to_save == -1){
     to_save = m.rows();
   }
 
-  // Inserting element in pair vector 
-  // to keep track of previous indexes 
   for (int i = 0; i < m.rows(); i++) { 
     float vaaal = m(i);
     vp.push_back(make_pair(vaaal, i)); 
   }  
 
-  // Sorting pair vector 
   std::stable_sort(vp.begin(), vp.end(),
                  [](const auto& a, const auto& b){return a.first < b.first;});
 
@@ -393,7 +367,7 @@ void sort_matr(const Eigen::MatrixXf &m,
 
 int tr_iterative_closest_point(const Eigen::MatrixXf &src,
            const Eigen::MatrixXf &dst,
-           Eigen::MatrixXf &src_trans, 
+           Eigen::MatrixXf &srcTransformation, 
            const int max_itreations,
            const double error_low_thresh, 
            const double dist_drop_thresh,
@@ -403,44 +377,34 @@ int tr_iterative_closest_point(const Eigen::MatrixXf &src,
   Eigen::MatrixXi knn_indices;
   Eigen::MatrixXf sq_dists, tr_sq_dists(Npo, 1);
   Eigen::MatrixXf tr_dst(Npo,3), tr_src(Npo, 3);
-  src_trans = src; 
+  srcTransformation = src; 
 
   Eigen::MatrixXf src_neighbours(dst.rows(),3);
   double mean_error = 0;
 
-  // iterate throug optimisation till you eather reach max iterations or break out
   for(int i=0; i<max_itreations; i++){
-    searchNN(src_trans, dst, K, knn_indices, sq_dists, 1);
+    searchNN(srcTransformation, dst, K, knn_indices, sq_dists, 1);
 
 
-    // sort and trimm distances
     Eigen::MatrixXi old_dst_ind;
     Eigen::MatrixXf sorted_tr_distances;
     sort_matr(sq_dists, sorted_tr_distances, old_dst_ind, Npo);
     
-    // save trimmed source and destination
     for(int i =0; i<Npo; i++){
       int dst_ind = old_dst_ind(i);
       int src_ind = knn_indices(dst_ind,1);
-      tr_src.block<1,3>(i,0) = src_trans.block<1,3>(src_ind,0);
+      tr_src.block<1,3>(i,0) = srcTransformation.block<1,3>(src_ind,0);
       tr_dst.block<1,3>(i,0) = dst.block<1,3>(dst_ind,0);
     }
 
-    // calculate stopping conditions ************************
-    // sum up all the smallest distances
     float dist_sum = sq_dists.sum();  //sorted_tr_distances.sum();
 
-    // trimmed mean square error
     float e = dist_sum/Npo;
-
-    // if mse is lower then thresh or if distance drop if below the thresh, stop the tr_iterative_closest_point
     if(e<error_low_thresh || abs(prev_dist_sum-dist_sum)<dist_drop_thresh){
       cout << "TR_iterative_closest_point has sucessfully reached the boundary conditions." << endl;
       return 1;
     }
 
-    // calculate translation ************************************
-    // find transform matrix
     Eigen::Matrix3d tR;
     Eigen::Vector3d tt;
     EigenJacboiSVD(tr_src.cast<double>(), tr_dst.cast<double>(), tR, tt);
@@ -448,21 +412,19 @@ int tr_iterative_closest_point(const Eigen::MatrixXf &src,
     Eigen::Vector3f t = tt.cast<float>();
 
     // rotation
-    src_trans = (R*src_trans.transpose()).transpose();
+    srcTransformation = (R*srcTransformation.transpose()).transpose();
 
     // translation
-    for(int fs = 0; fs<src_trans.rows();fs++){
+    for(int fs = 0; fs<srcTransformation.rows();fs++){
       for(int a = 0; a<3; a++){
-        src_trans(fs,a) = src_trans(fs,a)+t(a);   
+        srcTransformation(fs,a) = srcTransformation(fs,a)+t(a);   
       }
     }
     
-    cout <<"********TR_iterative_closest_point Cycle "+ to_string(i)+ "*****" << endl;
+    cout <<"TR_iterative_closest_point Cycle "+ to_string(i)+ "*****" << endl;
     cout <<"trimmed MSE: "+ to_string(e)+ "/" + to_string(error_low_thresh) <<endl;
     cout <<"Change of trimmed MSE: "+to_string(abs(prev_dist_sum-dist_sum))+ "/" + to_string(dist_drop_thresh) << endl;
 
-    // cout << to_string(abs(prev_dist_sum-dist_sum)) << endl;
-    // cout << to_string(e) << endl;
 
     prev_dist_sum = dist_sum;
   }
