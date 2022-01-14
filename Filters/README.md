@@ -94,7 +94,7 @@ Structural Similarity Index (Spectral Sigma = 5, Spatial Sigma = 5)
 |Baby|0.928602|0.928214|
 |Books|0.966113|0.965952|
 |Reindeer|0.959755|0.96304|
-|Cleaning Equipmemnt|0.952163|0.951438|
+|Cleaning Equipment|0.952163|0.951438|
 
 PSNR (Spectral Sigma = 5, Spatial Sigma = 5)
 
@@ -105,7 +105,7 @@ PSNR (Spectral Sigma = 5, Spatial Sigma = 5)
 |Baby|28.7898|28.927|
 |Books|28.5899|25.1427|
 |Reindeer|27.4775|27.0694|
-|Cleaning Equipmemnt|27.1574|26.8003|
+|Cleaning Equipment|27.1574|26.8003|
 
 #
 
